@@ -376,7 +376,7 @@ function formatBounds(bounds, proj) {
         ymax = northeast.y.toFixed(4);
     }
 
-    if (gdal) {
+/*     if (gdal) {
         if (lngLat) {
             formattedBounds = xmin+','+ymin+','+xmax+','+ymax;
         } else {
@@ -388,7 +388,10 @@ function formatBounds(bounds, proj) {
         } else {
             formattedBounds = ymin+' '+xmin+' '+ymax+' '+xmax;
         }
-    }
+    } */
+
+    formattedBounds = '[' + xmin+','+ymin+','+xmax+','+ymax +']';
+
     return formattedBounds
 }
 
