@@ -648,7 +648,7 @@ $(document).ready(function() {
 
     }
 
-    var boxboundclip = new ZeroClipboard( $("#boxboundsbtn"), {
+/*     var boxboundclip = new ZeroClipboard( $("#boxboundsbtn"), {
         moviePath: "/swf/ZeroClipboard.swf"
     });
     
@@ -707,7 +707,7 @@ $(document).ready(function() {
             zeroFeedback( client.htmlBridge );
         });
     });
-
+ */
     var boxboundsbtn = new ClipboardJS('#boxboundsbtn');
     var boxboundscrsimg = new ClipboardJS('#boxbounds-crs-img');
     var boxboundsmercbtn = new ClipboardJS('#boxboundsmercbtn');
