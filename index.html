@@ -13,7 +13,11 @@
     
     <script src="js/libs/jquery-1.9.1.min.js"></script>
     <script src="js/libs/jquery-ui-1.10.3.custom.js"></script>
+
     <script src="js/libs/ZeroClipboard.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+
     <script src="js/maps/leaflet.js"></script>
     <script src="js/maps/mapbox.v3.2.0.js"></script>
     <script src="js/maps/leaflet.draw.js"></script>
@@ -48,7 +52,6 @@
     <section id="info-box">
         <div id="info-toggle">
             <ul>
-                <!-- <li id="info-toggle-button">Hide Coordinates</li> -->
                 <li >OGC bbox building block</li>
                 <li id="wgslabel" class="active"></li>
                 <li id="projlabel"></li>
@@ -56,73 +59,25 @@
         </div>
         <div id="info">
             <div id="wgscoords" class="coords">
-<!--                 <div id="mouse">
-                    <span id="mouselabel" class="bboxlabel">Mouse</span>
-                    <span id="mousepos" class="bboxllpossmall"></span>
-                </div>
-                <div id="tile">
-                    <span id="tilelabel" class="bboxlabel">Tile</span>
-                    <span class="tilelevel tilesmall"></span>
-                </div>
-                <div id="zoom">
-                    <span id="bboxlabel" class="bboxlabel">Zoom</span>
-                    <span class="zoomlevel zoomsmall"></span>
-                </div> -->
                 <div id="bbounds">
                     <span id="bbboundslabel" class="bboxlabel">bbox</span>
-                    <img id="boxboundsbtn" data-clipboard-target="boxbounds" src="images/copy.png"><span id="boxbounds" class="bboxllpos"></span>
+                    <img id="boxboundsbtn" data-clipboard-target="#boxbounds" src="images/copy.png" alt="Copy to clipboard">
+                    <span id="boxbounds" class="bboxllpos"></span>
                 </div>
-<!--                 <div id="mbounds">
-                    <span id="mboundslabel" class="bboxlabel">Map</span>
-                    <img id="mapboundsbtn" data-clipboard-target="mapbounds" src="/images/copy.png"><span id="mapbounds" class="bboxllpos"></span>
-                </div>
-                <div id="mcenter">
-                    <span id="mcenterlabel" class="bboxlabel">Center</span>
-                    <img id="centerbtn" data-clipboard-target="center" src="/images/copy.png"><span id="center" class="bboxllpossmall"></span>
-                </div>
- -->            </div>
+            </div>
             <div id="projcoords" class="coords">
-<!--                 <div id="mouse">
-                    <span id="mouselabel" class="bboxlabel">Mouse</span>
-                    <span id="mouseposmerc" class="bboxprojpossmall"></span>
-                </div>
-                <div id="tile">
-                    <span id="tilelabel" class="bboxlabel">Tile</span>
-                    <span class="tilelevel tilesmall"></span>
-                </div>
-                <div id="zoom">
-                    <span id="bboxlabel" class="bboxlabel">Zoom</span>
-                    <span class="zoomlevel zoomsmall"></span>
-                </div> -->
                 <div id="bbounds">
                     <span id="bbboundslabel" class="bboxlabel">bbox</span>
-                    <img id="boxboundsmercbtn" data-clipboard-target="boxboundsmerc" src="images/copy.png"><span id="boxboundsmerc" class="bboxprojpos"></span>
+                    <img id="boxboundsmercbtn" data-clipboard-target="#boxboundsmerc" src="images/copy.png" alt="Copy to clipboard">
+                    <span id="boxboundsmerc" class="bboxprojpos"></span>
                 </div>
                 <div id="bbox-crs">
-                    <span id="bbboundslabel" class="bboxlabel">bbox-crs</span>
-                    <span id="boxboundsmerc" class="bboxprojpos">3857</span>
+                    <span id="bbbounds-crs-label" class="bboxlabel">bbox-crs</span>
+                    <img id="boxbounds-crs-img" data-clipboard-target="#boxbounds-crs" src="images/copy.png" alt="Copy to clipboard">
+                    <span id="boxbounds-crs" class="bboxprojpos">3857</span>
                 </div>
-                
-<!--                 <div id="mbounds">
-                    <span id="mboundslabel" class="bboxlabel">Map</span>
-                    <img id="mapboundsmercbtn" data-clipboard-target="mapboundsmerc" src="/images/copy.png"><span id="mapboundsmerc" class="bboxprojpos"></span>
-                </div>
-                <div id="mcenter">
-                    <span id="mcenterlabel" class="bboxlabel">Center</span>
-                    <img id="centermercbtn" data-clipboard-target="centermerc" src="/images/copy.png"><span id="centermerc" class="bboxprojpossmall"></span>
-                </div> -->
             </div>
-<!--             <div id="coord-format">
-                <div class="bboxlabel">
-                    Coordinate Format
-                </div>
-                <form>
-                    <input type="radio" name="coord-order" value="lng-lat" checked>Lng / Lat</input></br>
-                    <input type="radio" name="coord-order" value="lat-lng">Lat / Lng</input><br/>
-                    <input type="checkbox" name="gdal-checkbox" value="gdal" checked>GDAL</input>
-                </form>
-            </div>
- -->        </div>
+        </div>
     </section>
 
 
@@ -134,7 +89,7 @@
         </div>
     </div>
 </body>                                                                                                                          
-<script>
+<!-- <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -143,5 +98,5 @@
   ga('create', 'UA-1253169-10', 'bboxfinder.com');
   ga('send', 'pageview');
 
-</script>
+</script> -->
 </html>

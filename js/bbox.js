@@ -708,6 +708,10 @@ $(document).ready(function() {
         });
     });
 
+    var boxboundsbtn = new ClipboardJS('#boxboundsbtn');
+    var boxboundscrsimg = new ClipboardJS('#boxbounds-crs-img');
+    var boxboundsmercbtn = new ClipboardJS('#boxboundsmercbtn');
+
     // handle create-geojson click events
     $('#create-geojson').click(function(){
         rsidebar.toggle();
